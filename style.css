@@ -1,0 +1,67 @@
+/* css reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+}
+body {
+  background-color: #000;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+input {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 70px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+button {
+  border: none;
+  width: 100px;
+  margin: 60px 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.start {
+  background-color: rgb(39, 182, 46);
+  transition: all 0.3s ease;
+}
+.start:hover {
+  background-color: rgb(19, 153, 26);
+  transition: all 0.3s ease;
+}
+.stop {
+  background-color: rgb(255, 71, 71);
+  transition: all 0.3s ease;
+}
+.stop:hover {
+  background-color: rgb(214, 60, 60);
+  transition: all 0.3s ease;
+}
+.reset {
+  background-color: yellow;
+  transition: all 0.3s ease;
+}
+.reset:hover {
+  background-color: rgb(172, 172, 0);
+  transition: all 0.3s ease;
+}
+.buttons {
+  display: flex;
+}
