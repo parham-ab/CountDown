@@ -1,3 +1,4 @@
+// "use strict";
 let h = document.querySelector(".h");
 let m = document.querySelector(".m");
 let s = document.querySelector(".s");
@@ -6,22 +7,26 @@ const initialValue = `00`;
 const startBtn = document.querySelector(".start");
 const stopBtn = document.querySelector(".stop");
 const resetBtn = document.querySelector(".reset");
-// countDouwn function
+// countDown function
 startBtn.addEventListener("click", myCount);
 
 function myCount() {
   const x = setInterval(() => {
-    //   second
-    // reset this function if all input were 0
+    // reset this function if all input's were 0
     if (
       s.value == initialValue &&
       m.value == initialValue &&
       h.value == initialValue
     ) {
-      reseter();
+      resetter();
       alert("Please Enter a value !");
     }
     // end
+    if (+s.value > 59 || +m.value > 59 || +h.value > 59) {
+      resetter();
+      alert("Values must be lower than 59!");
+    }
+    // second
     s.value--;
     if (s.value == -1) {
       s.value = 59;
@@ -64,8 +69,8 @@ function myCount() {
       startBtn.style.display = "block";
     }
     // Reset button
-    resetBtn.addEventListener("click", reseter);
-    function reseter() {
+    resetBtn.addEventListener("click", resetter);
+    function resetter() {
       stopper();
       s.value = initialValue;
       m.value = initialValue;
@@ -77,8 +82,16 @@ function myCount() {
       m.value.startsWith("-") ||
       s.value.startsWith("-")
     ) {
-      reseter();
+      resetter();
     }
+    // automatically reset the app when time's up!
+    if (
+      startBtn.style.display == "none" &&
+      h.value &&
+      m.value == 00 &&
+      s.value == 00
+    )
+      resetter();
   }, 1000);
   // disappear start button after click on it
   if (x) {
