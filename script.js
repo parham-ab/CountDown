@@ -20,11 +20,16 @@ function myCount() {
     ) {
       resetter();
       alert("Please Enter a value !");
+      startBtn.classList.add("animate__animated", "animate__fadeInDown");
     }
     // end
-    if (+s.value > 59 || +m.value > 59 || +h.value > 59) {
+    if (+s.value > 59 || +m.value > 59) {
       resetter();
-      alert("Values must be lower than 59!");
+      alert("Minute & Second must be lower than 59!");
+    }
+    if (+h.value > 24) {
+      resetter();
+      alert("Hours must be lower than 24!");
     }
     // second
     s.value--;
@@ -60,6 +65,7 @@ function myCount() {
       h.value == initialValue
     ) {
       clearInterval(x);
+      startBtn.classList.add("animate__animated", "animate__fadeInDown");
     }
     // Stop button
     stopBtn.addEventListener("click", stopper);
@@ -67,6 +73,7 @@ function myCount() {
       clearInterval(x);
       // show start button after click on stop or reset button
       startBtn.style.display = "block";
+      startBtn.classList.add("animate__animated", "animate__fadeInDown");
     }
     // Reset button
     resetBtn.addEventListener("click", resetter);
