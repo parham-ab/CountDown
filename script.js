@@ -2,6 +2,7 @@
 let h = document.querySelector(".h");
 let m = document.querySelector(".m");
 let s = document.querySelector(".s");
+let myAudio = document.querySelector("#sound");
 const initialValue = `00`;
 // buttons
 const startBtn = document.querySelector(".start");
@@ -57,6 +58,16 @@ function myCount() {
       s.value = initialValue;
       m.value = initialValue;
       h.value = initialValue;
+    }
+    // play sound in last 3 seconds
+    if (h.value == 00 && m.value == 00 && s.value == 03) {
+      myAudio.play();
+      stopBtn.addEventListener("click", function () {
+        myAudio.play() && myAudio.pause();
+      });
+      resetBtn.addEventListener("click", function () {
+        myAudio.play() && myAudio.pause();
+      });
     }
     // stop countDown when all the numbers are 0
     if (
