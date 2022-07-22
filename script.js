@@ -69,6 +69,16 @@ function myCount() {
         myAudio.play() && myAudio.pause();
       });
     }
+    // change second color to red in last 3 seconds
+    if (
+      (h.value == 00 && m.value == 00 && s.value == 03) ||
+      s.value == 02 ||
+      s.value == 01
+    ) {
+      s.style.color = "#e35858";
+    } else {
+      s.style.color = "#fff";
+    }
     // stop countDown when all the numbers are 0
     if (
       s.value == initialValue &&

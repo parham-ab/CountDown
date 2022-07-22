@@ -9,7 +9,7 @@
   outline: none;
 }
 body {
-  background-color: #000;
+  background-color: #111;
 }
 .container {
   display: flex;
@@ -20,7 +20,7 @@ body {
 }
 input {
   border: none;
-  background-color: #000;
+  background-color: #111;
   color: #fff;
   font-size: 70px;
   width: 100px;
@@ -30,36 +30,41 @@ input {
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-button {
+span {
   border: none;
-  width: 100px;
-  margin: 60px 5px;
+  margin: 40px;
   font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
 }
+i {
+  font-size: 30px;
+}
 .start {
-  background-color: rgb(39, 182, 46);
+  color: #e35858;
   transition: all 0.3s ease;
 }
 .start:hover {
-  background-color: rgb(19, 153, 26);
+  color: rgb(214, 60, 60);
+  transition: all 0.3s ease;
+}
+.start:hover {
   transition: all 0.3s ease;
 }
 .stop {
-  background-color: rgb(255, 71, 71);
+  color: #e35858;
   transition: all 0.3s ease;
 }
 .stop:hover {
-  background-color: rgb(214, 60, 60);
+  color: rgb(214, 60, 60);
   transition: all 0.3s ease;
 }
 .reset {
-  background-color: yellow;
+  color: #56bccd;
   transition: all 0.3s ease;
 }
 .reset:hover {
-  background-color: rgb(172, 172, 0);
+  color: #0fc1e1;
   transition: all 0.3s ease;
 }
 .buttons {
