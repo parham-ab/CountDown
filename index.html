@@ -15,12 +15,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
     <title>CountDown</title>
   </head>
   <body>
+    <div class="confetti"></div>
     <div class="container">
-      <audio src="sound.mp3" id="sound"></audio>
+      <audio src="/assets/music/sound.mp3" id="sound"></audio>
       <div class="userInput">
         <input type="number" value="00" min="00" class="h" />
         <input type="number" value="00" min="00" max="59" class="m" />
@@ -38,6 +39,7 @@
         </span>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

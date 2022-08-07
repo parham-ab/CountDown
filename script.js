@@ -3,6 +3,7 @@ let h = document.querySelector(".h");
 let m = document.querySelector(".m");
 let s = document.querySelector(".s");
 let myAudio = document.querySelector("#sound");
+const confettiEffect = document.querySelector(".confetti");
 const initialValue = `00`;
 // buttons
 const startBtn = document.querySelector(".start");
@@ -87,6 +88,9 @@ function myCount() {
     ) {
       clearInterval(x);
       startBtn.classList.add("animate__animated", "animate__fadeInDown");
+      party.confetti(confettiEffect, {
+        count: party.variation.range(70, 100),
+      });
     }
     // Stop button
     stopBtn.addEventListener("click", stopper);
